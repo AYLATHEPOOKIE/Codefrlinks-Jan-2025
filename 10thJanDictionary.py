@@ -44,7 +44,8 @@ Countries={"France":"Paris",
             "Scotland":"Edingburgh",
             "Spain":"Madrid",
             "UAE":"Abu Dhabi",
-            "US":"Washington"}
+            "US":"Washington",
+            "Wales":"Cardiff"}
 
 while True:
  choice=int(input("\n 1 for viewing all capitals\n 2 for viewing all countries\n 3 for contry guessing game\n 4 for editing\n"))
