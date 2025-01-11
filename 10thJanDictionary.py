@@ -31,13 +31,51 @@ print(classroom["Pheobe"]["age"])"""
 #clear=cls
 import random
 Countries={"France":"Paris",
-           "England":"London"}
-choice=int(input(" 1 for viewing all capitals\n 2 for viewing all countries\n 3 for contry guessing game\n 4 for editing"))
-if choice==1:
-    for i in Countries:
-        print(i,Countries[i],"\n")
-elif choice==2:
-    for i in Countries:
-        print(i)
-elif choice==3:
-    print("What's the capital of... {}".format(random.choice(list(Countries.keys()))))
+           "England":"London",
+           "Pakistan":"Islamabad",
+           "Brazil":"Brassilia",
+            "Canada":"Ottawa",
+            "Gremany":"Berlin",
+            "India":"New Dehli",
+            "Japan":"Tokyo",
+            "Mexico":"Mexico City",
+            "New Zealand":"Wellington",
+            "Norway":"Oslo",
+            "Scotland":"Edingburgh",
+            "Spain":"Madrid",
+            "UAE":"Abu Dhabi",
+            "US":"Washington"}
+
+while True:
+ choice=int(input("\n 1 for viewing all capitals\n 2 for viewing all countries\n 3 for contry guessing game\n 4 for editing\n"))
+
+ if choice==1:
+     for i in Countries:
+         print(i,Countries[i],"\n")
+
+ elif choice==2:
+     for i in Countries:
+         print(i)
+
+ chances=3
+ score=0
+ if choice==3:
+  while chances>0:
+   country=random.choice(list(Countries.keys()))
+   answer=input("What's the capital of... {}? ".format(country))
+   if answer.capitalize()==Countries[country]:
+        score+=1
+        print("YAYYYYY YOU GOT IT RIGHT! Your score is {}".format(score))
+        
+   else:
+        chances-=1
+        print("Ohhhh tough luck. You have {} more chances.".format(chances))
+
+  print("STOP!!! You ran out of chances! Your final score was {}".format(score))
+
+ if choice==4:
+         countrie=input("Whats the country?")
+         cap=input("What's the capital of {}?".format(countrie))
+         Countries[countrie.capitalize()]=cap.capitalize()
+
+        
