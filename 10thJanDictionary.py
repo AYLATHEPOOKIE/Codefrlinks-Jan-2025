@@ -70,7 +70,7 @@ while True:
         
    else:
         chances-=1
-        print("Ohhhh tough luck. You have {} more chances.".format(chances))
+        print("Ohhhh tough luck.The answer was {}. You have {} more chances.".format(Countries[country],chances))
 
   print("STOP!!! You ran out of chances! Your final score was {}".format(score))
 
