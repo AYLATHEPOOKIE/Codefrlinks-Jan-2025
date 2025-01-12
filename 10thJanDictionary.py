@@ -33,10 +33,9 @@ import random
 Countries={"France":"Paris",
            "England":"London",
            "Pakistan":"Islamabad",
-           "Brazil":"Brassilia",
+           "Brazil":"Brasilia",
             "Canada":"Ottawa",
             "Gremany":"Berlin",
-            "India":"New Dehli",
             "Japan":"Tokyo",
             "Mexico":"Mexico City",
             "New Zealand":"Wellington",
@@ -64,7 +63,7 @@ while True:
   while chances>0:
    country=random.choice(list(Countries.keys()))
    answer=input("What's the capital of... {}? ".format(country))
-   if answer.capitalize()==Countries[country]:
+   if answer.lower()==Countries[country].lower():
         score+=1
         print("YAYYYYY YOU GOT IT RIGHT! Your score is {}".format(score))
         
