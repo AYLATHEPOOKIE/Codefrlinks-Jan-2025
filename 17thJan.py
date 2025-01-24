@@ -39,22 +39,24 @@ else:
 
 #frequent words
 
-"""sent=input("Input a sentence: ")
+sent=input("Input a sentence: ")
 
 sent=sent.lower()
 
 words=sent.split()
 
-word={}
+word={}.fromkeys(words,0)
 
 for i in words:
     if i in word:
         word[i]+=1
-    word[i]=0
+    
 
-print("Your most used word is ",max(word))
-"""
-#number thing 
+wordthing=max(word.values())
+key=[k for k,v in word.items() if v==wordthing]
+print("The most frequent word is",key)
+
+"""#number thing 
 
 numbers=input("Input a number: ")
 
@@ -67,3 +69,4 @@ for i in numbers:
 
 print("Your most used number is ",max(num))
 
+"""
